@@ -25,7 +25,9 @@ google = 400
 amazon = 380
 facebook = 350
 
-google * 6 + amazon * 4 + facebook * 10 
+weekly_pay = google * 6 + amazon * 4 + facebook * 10
+
+print(weekly_pay)
 
 #A student can be enrolled to a class only if the class is not full and the class schedule does not conflict with her current schedule.
 
@@ -34,7 +36,13 @@ schedule_conflict = False
 
 student_enrolled = True if class_not_full == True and schedule_conflict == False else False
 
-student_enrolled
+print(student_enrolled)
+
+#Class example
+class_is_not_full = True
+schedule_does_not_conflict = True
+enroll = class_is_not_full and schedule_does_not_conflict
+print(enroll)
 
 #A product offer can be applied only if people buys more than 2 items, and the offer has not expired. 
 #Premium members do not need to buy a specific amount of products.
@@ -46,7 +54,15 @@ bought_enough = True if items_bought > 2 else False
 
 gets_offer = True if items_bought > 2 and offer_expired == False or premium_member == True else False
 
-gets_offer
+print(gets_offer)
+
+#Class example
+
+purchase_more_than_two = True
+product_not_expired = True
+premium_member = False
+discount_eli = product_not_expired and (purchase_more_than_two or premium_member)
+print(discount_eli)
 
 #Use the following code to follow the instructions below:
 
@@ -60,22 +76,35 @@ password = 'notastrongpassword'
 at_least_five = len(password) >= 5
 
 len(password)
-at_least_five
+
+print(at_least_five)
 
 #the username must be no more than 20 characters
 
 no_more_than_twenty = len(username) <= 20
-no_more_than_twenty
+print(no_more_than_twenty)
 
 #the password must not be the same as the username
 
-password_cannot_be_username = False if password == username else True
-password_cannot_be_username
+password_is_not_username = False if password == username else True
+print(password_is_not_username)
 
 #bonus neither the username or password can start or end with whitespace
 
+username = 'codeup'
+password = 'notastrongpassword'
+
 no_spaces_pass = True if password.strip() == password else False
-no_spaces_pass
+print(no_spaces_pass)
 no_spaces_user = True if username.strip() == username else False
-no_spaces_user
+print(no_spaces_user)
+both_correct = no_spaces_pass and no_spaces_user == True
+print(both_correct)
+
+#Class Example
+
+no_whitespace_username = not(username.startswith(' ') or username [-1] == ' ')
+no_whitespace_password = not(password.startswith(' ') or password [-1] == ' ')
+user_and_password_valid = no_whitespace_username or no_whitespace_password
+print(user_and_password_valid)
 
