@@ -131,24 +131,24 @@ def handle_commas():
 
 
 #function to get a number grade and converting it into a letter grade
-def get_letter_grade():
+def get_letter_grade(x):
 #input to get our number grade    
-    num_grade = int(input('Enter whole number grade here (1-100): '))
+    #num_grade = int(input('Enter whole number grade here (1-100): '))
 #starting with the highest values and moving down, using an if/elif/else statement to filter out each grade and
 #printing what our letter grade would be
-    if num_grade >= 88:
+    if x >= 90:
         
         print('A')
         
-    elif num_grade >= 80:
+    elif x >= 80:
         
         print('B')
         
-    elif num_grade >= 70:
+    elif x >= 70:
         
         print('C')
         
-    elif num_grade >= 60:
+    elif x >= 60:
         
         print('D')
         
